@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact - VERDOSMART</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header>
+    <div class="logo">
+        <img src="images/img1_files/logo.png.jpg" alt="Logo Verdosmart" />
+        <button class="button-link" onclick="window.location.href='index.html'"><h1>VERDOSMART</h1></button>
+    </div>
+    <ul class="menu">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="achat.html">Achats</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+        <li><a href="informatique.html">Informatique</a></li>
+        <li><a href="agronomie.html">Agronomie</a></li>
+    </ul>
+    <div class="number"><p>+221 78 687 14 79</p></div>
+    <div class="small_menu" role="button" aria-label="Menu mobile" tabindex="0">
+        <span>
+        <div></div>
+        <div></div>
+        </span>
+        <span>
+        <div></div>
+        <div></div>
+        </span>
+    </div>
+    </header>
+
+    <!-- Formulaire Tally intégré -->
+    <section class="contact" style="padding: 50px 5%;">
+    <h1 class="title">Contactez-nous</h1>
+    <div style="width: 100%; display: flex; justify-content: center;">
+        <iframe 
+        src="https://tally.so/embed/wLB28G?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" 
+        loading="lazy" 
+        width="100%" 
+        height="600" 
+        frameborder="0" 
+        marginheight="0" 
+        marginwidth="0" 
+        title="Formulaire Verdosmart" 
+        style="border: none; max-width: 100%;">
+        </iframe>
+    </div>
+    </section>
+
+    <footer>
+    <p>Site réalisé par Verdosmart | Tous les droits sont réservés.</p>
+    </footer>
+
+    <script>
+    var small_menu = document.querySelector(".small_menu");
+    var menu = document.querySelector(".menu");
+    small_menu.onclick = function () {
+        small_menu.classList.toggle("active");
+        menu.classList.toggle("small");
+    };
+    small_menu.addEventListener("keydown", function (e) {
+        if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        small_menu.classList.toggle("active");
+        menu.classList.toggle("small");
+        }
+    });
+    </script>
+</body>
+</html>
